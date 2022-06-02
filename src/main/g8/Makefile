@@ -18,7 +18,7 @@ build: init
 
 test: build
 	@echo "Running local tests"
-	docker run --rm --name=\$(APP_NAME) \$(APP_NAME)Runner sbt test
+	docker run --rm --name=\$(APP_NAME) \$(APP_NAME) sbt test
 
 run: build
 	@echo "Running application $name$"
