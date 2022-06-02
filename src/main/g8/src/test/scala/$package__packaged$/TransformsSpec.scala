@@ -1,15 +1,13 @@
 package $package$
 
-import org.scalatest.FunSpec
+import org.scalatest.funspec.AnyFunSpec
 import org.apache.spark.sql.functions._
-import com.github.mrpowers.spark.fast.tests.DataFrameComparer
 import org.apache.spark.sql.types.{StructField, StructType, StringType}
 import org.apache.spark.sql.Row
 
 class TransformsSpec
-    extends FunSpec
-    with SparkSessionTestWrapper
-    with DataFrameComparer {
+  extends AnyFunSpec
+    with SparkSessionTestWrapper {
 
   import spark.implicits._
 
@@ -41,7 +39,7 @@ class TransformsSpec
         StructType(expectedSchema)
       )
 
-      assertSmallDataFrameEquality(actualDF, expectedDF)
+      assert(actualDF.collect() === expectedDF.collect())
 
     }
 

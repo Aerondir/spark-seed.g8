@@ -1,13 +1,20 @@
 target/
+**/target/**/*
 lib_managed/
 src_managed/
 project/boot/
 
-.idea
+# intellij idea
+*.log
 *.iml
+*.ipr
+*.iws
+.idea
+.bsp
 
 *.swp
 
+# mac
 .DS_Store
 
 /tmp

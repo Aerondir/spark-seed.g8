@@ -1,4 +1,4 @@
-# spark-sbt.g8
+# spark-seed.g8
 
 A [Giter8](https://github.com/foundweekends/giter8) template for Spark SBT applications.
 
@@ -6,7 +6,7 @@ A [Giter8](https://github.com/foundweekends/giter8) template for Spark SBT appli
 
 1. Install SBT with Homebrew (`brew install sbt`) or with SDKMAN [which is a better option](https://mungingdata.com/java/sdkman-multiple-versions-java-sbt-scala/)
 
-2. Start the app generation wizard: `sbt new MrPowers/spark-sbt.g8`
+2. Start the app generation wizard: `sbt new aerondir/spark-seed.g8`
 
 3. Fill out the project properties on the command line
 
@@ -14,7 +14,7 @@ A [Giter8](https://github.com/foundweekends/giter8) template for Spark SBT appli
 
 ![giter8 gif](giter8.gif "giter8 Screenshot")
 
-**Important Note**: Use Scala 2.11 for Spark 2 apps and Scala 2.12 for Spark 3 apps (e.g. use Scala 2.11.12 with Spark 2.4.7 and Scala 2.12.12 with Spark 3.1.1).
+**Important Note**: Use Scala 2.11 for Spark 2 apps and Scala 2.12 for Spark 3 apps (e.g. use Scala 2.11.12 with Spark 2.4.7 and Scala 2.12.12 with Spark 3.2.1).
 
 ## Project Properties
 
@@ -22,17 +22,17 @@ A [Giter8](https://github.com/foundweekends/giter8) template for Spark SBT appli
 
 The project name.  This should be all lowercase and use hyphens.
 
-**package (default: com.github.mrpowers.my.cool.project)**
+**package (default: com.sample.my.cool.project)**
 
 The top-level package of the project.  This is typically the organization name followed by the project name.
 
-For example, the [top level package of spark-daria](https://github.com/MrPowers/spark-daria/blob/master/src/main/scala/com/github/mrpowers/spark/daria/sql/ColumnExt.scala#L1) is `com.github.mrpowers.spark.daria`, which consists of the organization name `com.github.mrpowers` and the project name `spark.daria`.
+For example, the [top level package of spark-daria](https://github.com/MrPowers/spark-daria/blob/master/src/main/scala/com/github/mrpowers/spark/daria/sql/ColumnExt.scala#L1) is `com.sample.spark.daria`, which consists of the organization name `com.sample` and the project name `spark.daria`.
 
-**scalaVersion (default: 2.12.12)**
+**scalaVersion (default: 2.13.8)**
 
-**sparkVersion (default: 3.1.1)**
+**sparkVersion (default: 3.2.1)**
 
-**sbtVersion (default: 1.4.9)**
+**sbtVersion (default: 1.6.2)**
 
 **version (default: 0.0.1)**
 

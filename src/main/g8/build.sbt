@@ -4,17 +4,17 @@ version := "$version$"
 
 scalaVersion := "$scalaVersion$"
 
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "$sparkVersion$" % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-core" % "$sparkVersion$" % Provided
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "$sparkVersion$" % Provided
 
-libraryDependencies += "com.github.mrpowers" %% "spark-daria" % "0.38.2"
-libraryDependencies += "com.github.mrpowers" %% "spark-fast-tests" % "0.21.3" % "test"
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test"
 
 // test suite settings
-fork in Test := true
-javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled")
+Test / fork := true
+//jvm settings
+javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:+UseContainerSupport")
 // Show runtime of tests
-testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD")
+Test / testOptions += Tests.Argument(TestFrameworks.ScalaTest, "-oD")
 
 // JAR file settings
 
