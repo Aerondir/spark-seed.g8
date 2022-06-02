@@ -2,6 +2,9 @@
 
 APP_NAME=$name$
 GIT_HASH?=\$(shell git rev-parse --short HEAD)
+ifndef $$GIT_HASH
+GIT_HASH := 42
+endif
 
 all: init build test run
 
