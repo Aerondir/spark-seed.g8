@@ -14,8 +14,6 @@ A [Giter8](https://github.com/foundweekends/giter8) template for Spark SBT appli
 
 ![giter8 gif](giter8.gif "giter8 Screenshot")
 
-**Important Note**: Use Scala 2.11 for Spark 2 apps and Scala 2.12 for Spark 3 apps (e.g. use Scala 2.11.12 with Spark 2.4.7 and Scala 2.12.12 with Spark 3.2.1).
-
 ## Project Properties
 
 **name (default: my-cool-project)**
@@ -28,11 +26,11 @@ The top-level package of the project.  This is typically the organization name f
 
 For example, the [top level package of spark-daria](https://github.com/MrPowers/spark-daria/blob/master/src/main/scala/com/github/mrpowers/spark/daria/sql/ColumnExt.scala#L1) is `com.sample.spark.daria`, which consists of the organization name `com.sample` and the project name `spark.daria`.
 
-**scalaVersion (default: 2.13.8)**
+**scalaVersion (default: 2.12.18)**
 
-**sparkVersion (default: 3.2.1)**
+**sparkVersion (default: 3.4.1)**
 
-**sbtVersion (default: 1.6.2)**
+**sbtVersion (default: 1.9.1)**
 
 **version (default: 0.0.1)**
 
